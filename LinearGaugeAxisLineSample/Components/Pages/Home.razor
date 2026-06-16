@@ -1,0 +1,32 @@
+﻿@page "/"
+
+@inject IJSRuntime JSRuntime
+
+<div>
+    <SfLinearGauge ID="Linear" Title="Outside" Orientation="Orientation.Horizontal">
+        <LinearGaugeEvents Loaded="Loaded"></LinearGaugeEvents>
+        <LinearGaugeTitleStyle FontWeight="499" FontFamily="inherit" />
+        <LinearGaugeAxes>
+            <LinearGaugeAxis Minimum="0" Maximum="100" OpposedPosition="true">
+                <LinearGaugeLine Width="2"/>
+                <LinearGaugeMajorTicks Interval="20" Height="7" Width="2" />
+                <LinearGaugeMinorTicks Interval="10" Height="3" Width="2" />
+                <LinearGaugeAxisLabelStyle>
+                    <LinearGaugeAxisLabelFont FontFamily="inherit" />
+                </LinearGaugeAxisLabelStyle>
+                <LinearGaugePointers>
+                    <LinearGaugePointer PointerValue="70" Placement="Placement.Near" Type="Point.Bar" Position="Position.Outside" Color="#0074E3" Width="25" Height="25" AnimationDuration="0" />
+                </LinearGaugePointers>
+            </LinearGaugeAxis>
+        </LinearGaugeAxes>
+    </SfLinearGauge>
+</div>
+
+@code{
+    public void Loaded(LoadedEventArgs args)
+    {
+      
+       JSRuntime.InvokeVoidAsync("customizePath");
+      
+    }
+}
