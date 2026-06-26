@@ -29,7 +29,7 @@ The sample uses the Blazor Linear Gauge component with customization applied dur
 
 ```bash
 git clone https://github.com/SyncfusionExamples/how-to-align-the-first-tick-line-with-the-start-of-the-axis-line-in-the-blazor-linear-gauge.git
-cd LinearGaugeAxisLineSample
+cd how-to-align-the-first-tick-line-with-the-start-of-the-axis-line-in-the-blazor-linear-gauge
 ```
 
 ### Run with Visual Studio
